@@ -1,0 +1,47 @@
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider   = "prisma-client-js"
+
+}
+
+// Ana Kategoriler
+model MainCategory {
+  id            String        @id @default(cuid())
+  name          String        @unique // Örn: "YKS Hazırlık", "Çocuk Kitapları"
+  subCategories SubCategory[] // Ana kategorinin alt kategorileri olur
+}
+
+// Alt Kategoriler:
+model SubCategory {
+  id             String       @id @default(cuid())
+  name           String       // Örn: "TYT Matematik", "AYT Fizik"
+  
+  
+  mainCategoryId String
+  mainCategory   MainCategory @relation(fields: [mainCategoryId], references: [id])
+
+  // Alt kategorinin içindeki ürünler 
+  products       Product[]
+}
+
+model Product {
+  id             String      @id @default(cuid())
+  title          String
+  description    String?
+  price          Float
+  imageUrl       String?
+  stock          Int         @default(0)
+  showcase       String      @default("normal") 
+
+
+  subCategoryId  String
+  subCategory    SubCategory @relation(fields: [subCategoryId], references: [id])
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
+}
+
+

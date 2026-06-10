@@ -1,0 +1,153 @@
+/* src/components/BookShowcase/BookShowcase.module.css */
+
+.showcaseSection {
+  width: 100%;
+  padding: 40px 0;
+  background-color: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+  position: relative;
+}
+
+.seeAll {
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #666666;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.seeAll:hover {
+  color: #000000;
+}
+
+/* Sihirli Alan: Soldan Sağa Kaydırma */
+.bookRow {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto; /* İçerik taşarsa yatayda kaydırma çubuğu açar */
+  padding-bottom: 15px; /* Kaydırma çubuğu kartlara yapışmasın diye */
+  scroll-behavior: smooth;
+}
+
+/* Kaydırma çubuğunu daha modern ve ince yapmak için (Opsiyonel) */
+.bookRow::-webkit-scrollbar {
+  height: 6px;
+}
+.bookRow::-webkit-scrollbar-thumb {
+  background-color: #eaeaea;
+  border-radius: 4px;
+}
+
+/* Kitap Kartı Tasarımı */
+.bookCard {
+  flex: 0 0 240px; /* Kartların daralmasını engeller, sabit 240px genişlik verir */
+  background-color: #ffffff;
+  border: 1px solid #f0f0f0;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.bookCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+}
+
+.imagePlaceholder {
+  height: 200px;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #fcfcfc;
+}
+
+.emoji {
+  font-size: 64px;
+}
+
+.bookInfo {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.categoryTag {
+  font-size: 11px;
+  font-weight: 700;
+  color: #888888;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.bookTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 1.4;
+  margin-bottom: 4px;
+  /* Başlık çok uzunsa 2 satırda kessin */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 42px; 
+}
+
+.author {
+  font-size: 13px;
+  color: #666666;
+  margin-bottom: 16px;
+}
+
+.footerRow {
+  margin-top: auto; /* Fiyat ve butonu kartın en altına sabitle */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.addButton {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.addButton:hover {
+  background-color: #333333;
+}

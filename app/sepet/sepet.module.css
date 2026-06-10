@@ -1,0 +1,177 @@
+.sepetContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.sayfaBasligi {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 30px;
+}
+
+.bosSepet {
+    text-align: center;
+    padding: 60px 0;
+    border: 1px dashed #eaeaea;
+    border-radius: 12px;
+    color: #666666;
+}
+
+.bosSepet p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.alisveriseDon {
+    display: inline-block;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.alisveriseDon:hover {
+    background-color: #333333;
+}
+
+.sepetIcerik {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.urunListesi {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.sepetKarti {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+    background-color: #ffffff;
+}
+
+.urunDetay h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+}
+
+.urunFiyat {
+    font-size: 14px;
+    color: #666666;
+}
+
+.urunAksiyon {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.adetYazisi {
+    font-size: 14px;
+    color: #333333;
+    font-weight: 500;
+}
+
+.araToplam {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a1a;
+    min-width: 80px;
+    text-align: right;
+}
+
+.siparisOzeti {
+    flex: 1;
+    background-color: #fafafa;
+    border: 1px solid #eaeaea;
+    border-radius: 12px;
+    padding: 24px;
+    position: sticky;
+    top: 90px;
+}
+
+.siparisOzeti h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.ozetSatir {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 12px;
+}
+
+.ayrac {
+    border: 0;
+    border-top: 1px solid #eaeaea;
+    margin: 16px 0;
+}
+
+.toplamSatir {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.toplamSatir span {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.genelToplamFiyat {
+    font-size: 20px !important;
+    font-weight: 800 !important;
+}
+
+.satinalButon {
+    width: 100%;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.satinalButon:hover {
+    background-color: #333333;
+}
+
+.silButon {
+  background-color: transparent;
+  color: #ff4d4f;
+  border: 1px solid #ffccc7;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.silButon:hover {
+  background-color: #fff1f0; 
+  border-color: #ff4d4f;
+}
